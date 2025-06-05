@@ -1,10 +1,12 @@
 // Copyright Camperfire Studios
 
-#include "GameplayEffectExtension.h"
-#include "GameFramework/Character.h"
+
 #include "AbilitySystem/AuraAttributeSet.h"
-#include "Net/UnrealNetwork.h"
+
 #include "AbilitySystemBlueprintLibrary.h"
+#include "GameFramework/Character.h"
+#include "GameplayEffectExtension.h"
+#include "Net/UnrealNetwork.h"
 
 UAuraAttributeSet::UAuraAttributeSet()
 {

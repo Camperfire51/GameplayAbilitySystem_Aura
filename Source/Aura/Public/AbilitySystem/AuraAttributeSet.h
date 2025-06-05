@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "AttributeSet.h"
-#include "GameplayEffectExtension.h"
 #include "AbilitySystemComponent.h"
 #include "AuraAttributeSet.generated.h"
 
