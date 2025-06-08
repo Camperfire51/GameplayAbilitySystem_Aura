@@ -27,6 +27,7 @@ struct FUIWidgetRow: public FTableRowBase
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	FText Message = FText();
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	TSubclassOf<UAuraUserWidget> MessageWidget;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
@@ -65,4 +66,13 @@ protected:
 	void MaxHealthChanged(const FOnAttributeChangeData& Data) const;
 	void ManaChanged(const FOnAttributeChangeData& Data) const;
 	void MaxManaChanged(const FOnAttributeChangeData& Data) const;
+
+	template <typename T>
+	T* GetDataTableRowByTag(UDataTable* DataTable, const FGameplayTag& Tag);
 };
+
+template<typename T>
+inline T* UOverlayWidgetController::GetDataTableRowByTag(UDataTable* DataTable, const FGameplayTag& Tag)
+{
+	return DataTable->FindRow<T>(Tag.GetTagName(), TEXT(""));
+}
