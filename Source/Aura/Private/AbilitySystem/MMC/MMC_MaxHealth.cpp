@@ -1,9 +1,8 @@
 // Copyright Camperfire Studios
 
-
-#include "AbilitySystem/MMC/MMC_MaxHealth.h"
 #include "AbilitySystem/AuraAttributeSet.h"
 #include "Interaction/CombatInterface.h"
+#include "AbilitySystem/MMC/MMC_MaxHealth.h"
 
 UMMC_MaxHealth::UMMC_MaxHealth()
 {
