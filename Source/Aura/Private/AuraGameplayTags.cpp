@@ -29,6 +29,6 @@ void FAuraGameplayTags::InitializeNativeGameplayTags()
 
 	/* Vital Attributes */
 
-	GameplayTags.Attributes_Secondary_Health =					UGameplayTagsManager::Get().AddNativeGameplayTag(FName("Attributes.Vital.Health"), FString("Amount of damage a character can receive before death"));
-	GameplayTags.Attributes_Secondary_Mana =					UGameplayTagsManager::Get().AddNativeGameplayTag(FName("Attributes.Vital.Mana"), FString("Amount of resources that a character uses in order to cast spells"));
+	GameplayTags.Attributes_Vital_Health =					UGameplayTagsManager::Get().AddNativeGameplayTag(FName("Attributes.Vital.Health"), FString("Amount of damage a character can receive before death"));
+	GameplayTags.Attributes_Vital_Mana =					UGameplayTagsManager::Get().AddNativeGameplayTag(FName("Attributes.Vital.Mana"), FString("Amount of resources that a character uses in order to cast spells"));
 }

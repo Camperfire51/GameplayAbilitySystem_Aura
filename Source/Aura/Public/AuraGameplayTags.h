@@ -36,8 +36,8 @@ public:
 	FGameplayTag Attributes_Secondary_MaxMana;
 
 	/* Vital Attributes */
-	FGameplayTag Attributes_Secondary_Health;
-	FGameplayTag Attributes_Secondary_Mana;
+	FGameplayTag Attributes_Vital_Health;
+	FGameplayTag Attributes_Vital_Mana;
 
 protected:
 private:
