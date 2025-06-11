@@ -25,7 +25,7 @@ public:
 template<class UserClass, typename PressedFuncType, typename ReleasedFuncType, typename HeldFuncType>
 inline void UAuraInputComponent::BindAbilityActions(const UAuraInputConfig* InputConfig, UserClass* Object, PressedFuncType PressedFunc, ReleasedFuncType ReleasedFunc, HeldFuncType HeldFunc)
 {
-	check(InpucConfig);
+	check(InputConfig);
 
 	for (const FAuraInputAction Action : InputConfig->AbilityInputActions)
 	{
