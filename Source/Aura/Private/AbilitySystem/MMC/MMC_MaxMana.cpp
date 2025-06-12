@@ -1,8 +1,8 @@
 // Copyright Camperfire Studios
 
+#include "AbilitySystem/MMC/MMC_MaxMana.h"
 #include "AbilitySystem/AuraAttributeSet.h"
 #include "Interaction/CombatInterface.h"
-#include "AbilitySystem/MMC/MMC_MaxMana.h"
 
 UMMC_MaxMana::UMMC_MaxMana()
 {
