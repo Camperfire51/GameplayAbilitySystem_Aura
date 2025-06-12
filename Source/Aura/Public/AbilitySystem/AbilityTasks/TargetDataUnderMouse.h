@@ -6,7 +6,7 @@
 #include "Abilities/Tasks/AbilityTask.h"
 #include "TargetDataUnderMouse.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FMouseTargetDataSignature, const FVector&, Data);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FMouseTargetDataSignature, const FGameplayAbilityTargetDataHandle&, DataHandle);
 
 /**
  * 
@@ -25,11 +25,6 @@ public:
 
 private:
 	virtual void Activate() override;
-	void OnMouseClick(const FHitResult& HitResult);
-	void OnMouseRelease(const FHitResult& HitResult);
-	void OnMouseMove(const FHitResult& HitResult);
-	FDelegateHandle MouseClickHandle;
-	FDelegateHandle MouseReleaseHandle;
-	FDelegateHandle MouseMoveHandle;
+	void SendMouseCursorData();
 
 };
