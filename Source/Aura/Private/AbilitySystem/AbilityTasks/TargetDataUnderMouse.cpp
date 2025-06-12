@@ -37,14 +37,15 @@ void UTargetDataUnderMouse::SendMouseCursorData()
 	FScopedPredictionWindow ScopedPrediction(AbilitySystemComponent.Get());
 
 	FHitResult CursorHit;
-	Ability->GetCurrentActorInfo()->PlayerController->GetHitResultUnderCursor(ECC_Visibility, false, CursorHit);
+	Ability->GetCurrentActorInfo()->PlayerController.Get()->GetHitResultUnderCursor(ECC_Visibility, false, CursorHit);
 
 	FGameplayAbilityTargetDataHandle DataHandle;
 	FGameplayAbilityTargetData_SingleTargetHit* Data = new FGameplayAbilityTargetData_SingleTargetHit();
 	Data->HitResult = CursorHit;
 	DataHandle.Add(Data);
 
-	AbilitySystemComponent->ServerSetReplicatedTargetData(GetAbilitySpecHandle(), 
+	AbilitySystemComponent->ServerSetReplicatedTargetData(
+		GetAbilitySpecHandle(), 
 		GetActivationPredictionKey(), 
 		DataHandle, 
 		FGameplayTag(), 
