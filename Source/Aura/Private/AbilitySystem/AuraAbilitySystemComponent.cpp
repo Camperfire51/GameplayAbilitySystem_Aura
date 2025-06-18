@@ -10,11 +10,6 @@ void UAuraAbilitySystemComponent::AbilityActorInfoSet()
 	OnGameplayEffectAppliedDelegateToSelf.AddUObject(this, &UAuraAbilitySystemComponent::ClientEffectApplied);
 
 	const FAuraGameplayTags GameplayTags = FAuraGameplayTags::Get();
-	GEngine->AddOnScreenDebugMessage(
-		-1, 
-		10.F, 
-		FColor::Orange, 
-		FString::Printf(TEXT("Tag: %s"), *GameplayTags.Attributes_Secondary_Armor.ToString()));
 }
 
 void UAuraAbilitySystemComponent::AddCharacterAbilities(const TArray<TSubclassOf<UGameplayAbility>> StartUpAbilities)
